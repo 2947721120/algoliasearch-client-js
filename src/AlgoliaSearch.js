@@ -97,7 +97,7 @@ function AlgoliaSearch(applicationID, apiKey, opts) {
   this.requestTimeout = timeout;
 
   this.extraHeaders = [];
-  this.cache = {};
+  this.cache = opts.cache || {};
 
   this._ua = opts._ua;
   this._useCache = opts._useCache === undefined ? true : opts._useCache;
