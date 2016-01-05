@@ -902,7 +902,9 @@ module.exports =
 	  this.requestTimeout = timeout;
 
 	  this.extraHeaders = [];
-	  this.cache = {};
+
+	  // In some situations you might want to warm the cache
+	  this.cache = opts.cache || {};
 
 	  this._ua = opts._ua;
 	  this._useCache = opts._useCache === undefined ? true : opts._useCache;

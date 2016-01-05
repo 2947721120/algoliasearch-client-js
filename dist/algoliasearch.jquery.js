@@ -1,4 +1,4 @@
-/*! algoliasearch 3.10.2 | © 2014, 2015 Algolia SAS | github.com/algolia/algoliasearch-client-js */
+/*! algoliasearch UNRELEASED | © 2014, 2015 Algolia SAS | github.com/algolia/algoliasearch-client-js */
 (function(f){var g;if(typeof window!=='undefined'){g=window}else if(typeof self!=='undefined'){g=self}g.ALGOLIA_MIGRATION_LAYER=f()})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 
 module.exports = function load (src, opts, cb) {
@@ -5023,7 +5023,9 @@ function AlgoliaSearch(applicationID, apiKey, opts) {
   this.requestTimeout = timeout;
 
   this.extraHeaders = [];
-  this.cache = {};
+
+  // In some situations you might want to warm the cache
+  this.cache = opts.cache || {};
 
   this._ua = opts._ua;
   this._useCache = opts._useCache === undefined ? true : opts._useCache;
@@ -7168,6 +7170,7 @@ IndexBrowser.prototype._clean = function() {
 };
 
 },{"1":1,"10":10}],83:[function(require,module,exports){
+(function (process){
 'use strict';
 
 // This is the jQuery Algolia Search module
@@ -7184,7 +7187,7 @@ var jsonpRequest = require(87);
 // expose original algoliasearch fn in window
 window.algoliasearch = require(84);
 
-if ("production" === 'development') {
+if (process.env.APP_ENV === 'development') {
   require(6).enable('algoliasearch*');
 }
 
@@ -7317,7 +7320,9 @@ AlgoliaSearchJQuery.prototype._promise = {
   }
 };
 
-},{"10":10,"6":6,"66":66,"81":81,"84":84,"85":85,"86":86,"87":87,"88":88,"89":89}],84:[function(require,module,exports){
+}).call(this,require(2))
+},{"10":10,"2":2,"6":6,"66":66,"81":81,"84":84,"85":85,"86":86,"87":87,"88":88,"89":89}],84:[function(require,module,exports){
+(function (process){
 'use strict';
 
 // This is the standalone browser build entry point
@@ -7333,7 +7338,7 @@ var errors = require(88);
 var inlineHeaders = require(86);
 var jsonpRequest = require(87);
 
-if ("production" === 'development') {
+if (process.env.APP_ENV === 'development') {
   require(6).enable('algoliasearch*');
 }
 
@@ -7530,7 +7535,8 @@ AlgoliaSearchBrowser.prototype._promise = {
   }
 };
 
-},{"10":10,"6":6,"66":66,"81":81,"85":85,"86":86,"87":87,"88":88,"89":89,"9":9}],85:[function(require,module,exports){
+}).call(this,require(2))
+},{"10":10,"2":2,"6":6,"66":66,"81":81,"85":85,"86":86,"87":87,"88":88,"89":89,"9":9}],85:[function(require,module,exports){
 'use strict';
 
 module.exports = getDocumentProtocol;
