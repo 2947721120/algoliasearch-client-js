@@ -32,7 +32,7 @@ JavaScript客户端，您可以使用 [Algolia Search API](https://www.algolia.c
 
 
 
-Table of Contents
+目录
 =================
 **Getting Started**
 
@@ -57,7 +57,7 @@ Table of Contents
 1. [Tutorials](#tutorials)
 1. [Old JavaScript clients](#old-javascript-clients)
 
-**Commands Reference**
+**命令参考**
 
 1. [Add a new object](#add-a-new-object-to-the-index)
 1. [Update an object](#update-an-existing-object-in-the-index)
@@ -80,15 +80,12 @@ Table of Contents
 
 
 
-Setup
--------------
-To setup your project, follow these steps:
+设置-------------要设置项目，请按照下列步骤操作：
 
 
 
-### Frontend
-
-You can either use a package manager like npm or include a `<script>` tag.
+### 前端
+您可以使用的软件包管理器像 npm或包括这个`<script>` 标签.
 
 #### npm
 
@@ -108,7 +105,7 @@ bower install algoliasearch -S
 
 [jsDelivr](http://www.jsdelivr.com/about.php) is a global CDN delivery for JavaScript libraries.
 
-To include the latest releases and all upcoming features and patches, use this:
+而包括最新版本和所有即将到来的功能和补丁，请使用以下：
 
 ```html
 <script src="//cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
