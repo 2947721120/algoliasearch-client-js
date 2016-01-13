@@ -1,11 +1,8 @@
-# Algolia Search API Client for JavaScript
+# Algolia 搜索客户端 API  JavaScript版本
 
 
 
-
-
-[Algolia Search](http://www.algolia.com) is a hosted full-text, numerical, and faceted search engine capable of delivering realtime results from the first keystroke.
-
+[Algolia Search](http://www.algolia.com) 是一种托管全文，数值和多面能够提供实时的结果，从第一按键的搜索引擎。
 
 
 
@@ -25,14 +22,13 @@
 [version-svg]: https://img.shields.io/npm/v/algoliasearch.svg?style=flat-square
 [package-url]: https://npmjs.org/package/algoliasearch
 
-The JavaScript client lets you use the [Algolia Search API](https://www.algolia.com/doc/rest_api) on the frontend (browsers) or on the backend (Node.js) with the same API.
+JavaScript客户端，您可以使用 [Algolia Search API](https://www.algolia.com/doc/rest_api)上的前端（浏览器）或在后端（Node.js的）与相同的API。
 
-The backend (Node.js) API can be used to index your data using your Algolia admin API keys.
+后端（Node.js的）API可以使用Algolia管理API密钥被用于索引数据。
 
-Our JavaScript library is [UMD](https://github.com/umdjs/umd) compatible, you can
-use it with any module loader.
+我们的JavaScript库 [UMD](https://github.com/umdjs/umd) 兼容，你可以使用它与任何模块加载器。
 
-When not using any module loader, it will export an `algoliasearch` method in the `window` object.
+当不使用任何模块加载器，它会导出n `algoliasearch` 在该方法 `window` 目的。
 
 
 
