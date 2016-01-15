@@ -34,7 +34,7 @@ JavaScript客户端，您可以使用 [Algolia Search API](https://www.algolia.c
 
 目录
 =================
-**Getting Started**
+**开始**
 
 1. [Setup](#setup)
   - [Frontend](#frontend)
@@ -185,7 +185,7 @@ Quick Start
 
 ### Frontend
 
-To build your frontend search experience, also check out our [examples](./examples/) and [tutorials](https://www.algolia.com/doc/tutorials).
+建立你的前端的搜索体验，还检查了我们的[examples](./examples/) 和 [tutorials](https://www.algolia.com/doc/tutorials).
 
 #### Vanilla JavaScript
 ```html
@@ -208,7 +208,7 @@ To build your frontend search experience, also check out our [examples](./exampl
 </script>
 ```
 
-#### jQuery module
+#### jQuery模块
 We provide a specific [jQuery](http://jquery.com/) build that will use [jQuery.ajax](http://api.jquery.com/jquery.ajax/).
 
 It can be used with callbacks or [jQuery promises](https://api.jquery.com/promise/).
@@ -225,10 +225,10 @@ It can be used with callbacks or [jQuery promises](https://api.jquery.com/promis
 </script>
 ```
 
-#### AngularJS module
+#### AngularJS 模块
 We provide a specific [AngularJS](https://angularjs.org/) build that is using the [$http service](https://docs.angularjs.org/api/ng/service/$http).
 
-It can be used with callbacks or [AngularJS promises](https://docs.angularjs.org/api/ng/service/$q).
+它可以使用回调或[AngularJS promises](https://docs.angularjs.org/api/ng/service/$q).
 
 ```html
 <script src="//cdn.jsdelivr.net/angularjs/1.3.14/angular.min.js"></script>
@@ -253,9 +253,9 @@ It can be used with callbacks or [AngularJS promises](https://docs.angularjs.org
 
 ### Backend (Node.js)
 
-In 30 seconds, this quick start tutorial will show you how to index and search objects.
+在30秒，这个快速启动教程将告诉你如何索引和搜索对象。
 
-Without any prior configuration, you can start indexing [500 contacts](https://github.com/algolia/algoliasearch-client-csharp/blob/master/contacts.json) in the `contacts` index using the following code:
+没有任何事先配置，您可以开始索引 [500 contacts](https://github.com/algolia/algoliasearch-client-csharp/blob/master/contacts.json) 在`contacts` 索引中使用以下代码：
 
 ```js
 var index = client.initIndex('contacts');
@@ -268,7 +268,7 @@ index.addObjects(contactsJSON, function(err, content) {
 });
 ```
 
-You can now search for contacts using firstname, lastname, company, etc. (even with typos):
+现在你可以搜索联系人使用FirstName、LastName公司等 (even with typos):
 ```js
 // firstname
 index.search('jimmie', function(err, content) {
